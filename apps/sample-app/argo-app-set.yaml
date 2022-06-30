@@ -25,7 +25,7 @@ spec:
         path: application/sample-app
         helm:
           valueFiles:
-            - environments/{{cluster}}.values.yaml
+            - /environments/{{cluster}}/values.yaml
       destination:
         server: '{{url}}'
         namespace: sample-app-{{cluster}}
