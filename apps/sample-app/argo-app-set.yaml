@@ -22,5 +22,11 @@ spec:
         targetRevision: main
         path: application/sample-app
       destination:
-        server: {{cluster}}
+        server: '{{cluster}}'
         namespace: sample-app-{{cluster}}
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+        - CreateNamespace=true
