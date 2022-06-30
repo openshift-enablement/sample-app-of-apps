@@ -22,10 +22,10 @@ spec:
       source:
         repoURL: https://github.com/openshift-enablement/sample-app-manifests
         targetRevision: main
-        path: application/sample-app
+        path: application
         helm:
           valueFiles:
-            - /environments/{{cluster}}/values.yaml
+            - environments/{{cluster}}/values.yaml
       destination:
         server: '{{url}}'
         namespace: sample-app-{{cluster}}
