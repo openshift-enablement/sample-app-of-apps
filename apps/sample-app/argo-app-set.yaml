@@ -23,7 +23,7 @@ spec:
         targetRevision: main
         path: application/sample-app
       destination:
-        server: '{{cluster}}'
+        server: '{{url}}'
         namespace: sample-app-{{cluster}}
       syncPolicy:
         automated:
