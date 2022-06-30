@@ -12,6 +12,8 @@ spec:
     path: apps
     repoURL: https://github.com/openshift-enablement/sample-app-of-apps
     targetRevision: main
+    directory:
+      recurse: true
   syncPolicy:
     automated:
       prune: true

@@ -2,6 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
  name: sample-app
+ namespace: openshift-gitops
 spec:
   generators:
   - list:
@@ -28,5 +29,3 @@ spec:
         automated:
           prune: true
           selfHeal: true
-        syncOptions:
-        - CreateNamespace=true
